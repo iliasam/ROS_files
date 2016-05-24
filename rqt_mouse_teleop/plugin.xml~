@@ -1,0 +1,17 @@
+<library path="src">
+  <class name="Mouse_teleop" type="rqt_mouse_teleop.my_mouse_teleop.Mouse_teleop" base_class_type="rqt_gui_py::Plugin">
+    <description>
+      A Python GUI plugin for controlling robot by mouse.
+    </description>
+    <qtgui>
+      <group>
+        <label>Miscellaneous Tools</label>
+        <icon type="theme">folder</icon>
+        <statustip>Plugins related to ???.</statustip>
+      </group>
+      <label>Mouse teleop</label>
+      <icon type="theme">applications-other</icon>
+      <statustip>A Python GUI plugin for controlling robot by mouse.</statustip>
+    </qtgui>
+  </class>
+</library>
