@@ -1,0 +1,18 @@
+<package>
+  <description brief="init_pos_publisher">
+
+     This is init_pos_publisher
+
+  </description>
+  <author>iliasam</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url></url>
+  <depend package="roscpp"/>
+  <depend package="sensor_msgs"/>
+ <depend package="tf"/>
+
+
+</package>
+
+
