@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>293</width>
-    <height>171</height>
+    <height>212</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -79,6 +79,19 @@
    </property>
    <property name="text">
     <string>Capacity: N/A</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_charge">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>170</y>
+     <width>181</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Charging: N/A</string>
    </property>
   </widget>
  </widget>

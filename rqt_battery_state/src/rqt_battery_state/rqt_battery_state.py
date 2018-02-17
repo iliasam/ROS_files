@@ -46,7 +46,7 @@ class Battery_state(Plugin):
         loadUi(ui_file, self._widget)
         self._widget.setObjectName('qt_gui3')
         if context.serial_number() > 0:
-            self._widget.setWindowTitle(self._widget.windowTitle() + (' (%d)' % context.serial_number()))
+            self._widget.setWindowTitle('Battery State')
         # Add widget to the user interface
         context.add_widget(self._widget)
         self._update_timer = QTimer(self)
@@ -82,6 +82,7 @@ class Battery_state(Plugin):
         f_capacity  = msg.capacity
         capacity  = msg.charge
         percentage  = msg.percentage
+        charging = msg.power_supply_status
         
         if math.isnan(percentage):
             percentage = 0
@@ -101,8 +102,19 @@ class Battery_state(Plugin):
         self._widget.label_capacity.setText('Capacity: ' + ('%.2f' % capacity) + ' A*h')
         self._widget.progressBar.setValue(int(percentage))
         
-        
-
+        if (charging == 0):
+            self._widget.label_charge.setText('Charging: N/A')
+        elif (charging == 1):
+            self._widget.label_charge.setText('Charging: Charge')
+        elif (charging == 2):
+            self._widget.label_charge.setText('Charging: Discharge')
+        elif (charging == 3):
+            self._widget.label_charge.setText('Charging: Not charging')
+        elif (charging == 4):
+            self._widget.label_charge.setText('Charging: Full')
+        else:
+            self._widget.label_charge.setText('Charging: N/A')
+       
 
     #def trigger_configuration(self):
         # Comment in to signal that the plugin has a way to configure
